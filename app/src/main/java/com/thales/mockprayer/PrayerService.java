@@ -51,7 +51,7 @@ public class PrayerService extends Service {
         timerTask = new TimerTask() {
             public void run() {
                 Log.i(TAG, "in timer ++++  " + (counter++));
-                //To Do: Here goes our prayer broadcast intent.
+                sendIntent();
             }
         };
     }
@@ -63,6 +63,13 @@ public class PrayerService extends Service {
         }
     }
 
+    private void sendIntent() {
+        Log.i(TAG, "Sending intent com.thalesifec.intent.action.EVENT_TIMELINE_EXTERNAL_EVENT_ADD with sample json");
+        Intent intent = new Intent("com.thalesifec.intent.action.EVENT_TIMELINE_EXTERNAL_EVENT_ADD");
+        intent.putExtra("com.thalesifec.cas.intent.extra.EXTRA_EVENT_TIMELINE_EXTERNAL_EVENT_JSON", getResources().getString(R.string.sample_json));
+        sendBroadcast(intent);
+        Log.i(TAG, "Sent intent for EVENT_TIMELINE_EXTERNAL_EVENT_ADD");
+    }
     @Override
     public IBinder onBind(Intent intent) {
         return null;

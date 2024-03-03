@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MockPrayerIntent</string>
+    <string name="sample_json">[{"id":999002,"eventStartMsecUtc":1707488501000,"eventStopMsecUtc":1707489101000,"type":"prayer","iconFilePath":"icon-file-path","posterFilePath":"poster-file-path","interactiveLink":"link","customJson":"custom-zn","metadata":[{"localeBcp47":"fr-FR","title":"Asr","description":"Il est temps de prier.","interactiveLinkDescription":""},{"localeBcp47":"en-US","title":"Asr","description":"It is time for prayer.","interactiveLinkDescription":""},{"localeBcp47":"ar-SA","title":"العصر","description":"حان وقت الصلاة.","interactiveLinkDescription":""}],"notifications":[{"id":1,"eventId":999002,"timeToLiveMsec":3000,"intrusiveness":"INTRUSIVE","displayTimeMsecBeforeEventStart":180000,"metadata":[{"localeBcp47":"en-US","body":"It is time for prayer.","actionDisplayText":""},{"localeBcp47":"fr-FR","body":"Il est temps de prier.","actionDisplayText":""},{"localeBcp47":"ar-SA","body":"حان وقت الصلاة.","actionDisplayText":""}]}]}]
+    </string>
 </resources>

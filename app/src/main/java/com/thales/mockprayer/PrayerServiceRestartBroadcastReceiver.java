@@ -11,6 +11,5 @@ public class PrayerServiceRestartBroadcastReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Log.i(PrayerServiceRestartBroadcastReceiver.class.getSimpleName(), "Service Stops! Start Prayer service!!");
         context.startService(new Intent(context, PrayerService.class));
-        ;
     }
 }
