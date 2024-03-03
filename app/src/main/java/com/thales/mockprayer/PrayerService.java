@@ -67,7 +67,9 @@ public class PrayerService extends Service {
         Log.i(TAG, "Sending intent com.thalesifec.intent.action.EVENT_TIMELINE_EXTERNAL_EVENT_ADD with sample json");
         Intent intent = new Intent("com.thalesifec.intent.action.EVENT_TIMELINE_EXTERNAL_EVENT_ADD");
         intent.putExtra("com.thalesifec.cas.intent.extra.EXTRA_EVENT_TIMELINE_EXTERNAL_EVENT_JSON", getResources().getString(R.string.sample_json));
+        //intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
         sendBroadcast(intent);
+        //Log.i(TAG, "Sent intent for EVENT_TIMELINE_EXTERNAL_EVENT_ADD with foreground flag added");
         Log.i(TAG, "Sent intent for EVENT_TIMELINE_EXTERNAL_EVENT_ADD");
     }
     @Override
